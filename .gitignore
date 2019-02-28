@@ -28,3 +28,4 @@ HELP.md
 
 ### Excluding generated code
 src/main/java/
+gradle.properties

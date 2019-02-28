@@ -2,15 +2,40 @@ plugins {
 	id 'com.commercehub.gradle.plugin.avro-base' version '0.9.1'
 	id 'java'
 	id 'maven'
+	id 'maven-publish'
 }
 
 group = 'com.streaming'
-version = '0.0.1-SNAPSHOT'
+version = '1.0-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
 	jcenter()
+	maven {
+		url 'https://pkgs.dev.azure.com/reddyhorcrux/_packaging/avro-messages/maven/v1'
+		credentials {
+			username "AZURE_ARTIFACTS"
+			password System.getenv("AVRO_MESSAGES_ACCESS_TOKEN") ?: "${AvroMessagesAccessToken}"
+		}
+	}
+}
+
+publishing {
+	publications {
+		myLibrary(MavenPublication) {
+			from components.java
+		}
+	}
+	repositories {
+		maven {
+			url 'https://pkgs.dev.azure.com/reddyhorcrux/_packaging/avro-messages/maven/v1'
+			credentials {
+				username "AZURE_ARTIFACTS"
+				password System.getenv("AVRO_MESSAGES_ACCESS_TOKEN") ?: "${AvroMessagesAccessToken}"
+			}
+		}
+	}
 }
 
 dependencies {
@@ -30,8 +55,8 @@ dependencies {
 }
 
 jar {
-	baseName = 'operational-ledger-schema'
-	version = '1.0.1'
+	baseName = 'avro-messages'
+	version = '1.0-SNAPSHOT'
 }
 
 avro {
