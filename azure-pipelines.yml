@@ -28,6 +28,8 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'build'
+  env:
+    AVRO_MESSAGES_ACCESS_TOKEN: $(AVRO_MESSAGES_ACCESS_TOKEN)
 
 - task: Gradle@2
   inputs:
