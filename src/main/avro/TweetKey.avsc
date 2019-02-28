@@ -1,0 +1,11 @@
+{
+    "type":"record",
+    "name":"TweetKey",
+    "namespace": "com.streaming.avro.messages",
+    "fields":[
+        {
+            "name":"id",
+            "type":["string"]
+        }
+    ]
+}
