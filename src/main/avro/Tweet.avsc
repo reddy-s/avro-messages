@@ -9,7 +9,7 @@
         },
         {
             "name":"tweet",
-            "type":string"
+            "type":"string"
         },
         {
             "name":"retweet",
