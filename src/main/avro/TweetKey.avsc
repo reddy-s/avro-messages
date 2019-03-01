@@ -1,7 +1,7 @@
 {
     "type":"record",
-    "name":"value",
-    "namespace": "com.streaming.avro.messages.Tweet",
+    "name":"TweetKey",
+    "namespace": "com.streaming.avro.messages",
     "fields":[
         {
             "name":"id",
