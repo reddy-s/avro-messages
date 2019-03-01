@@ -1,6 +1,6 @@
 {
     "type":"record",
-    "name":"key",
+    "name":"Key",
     "namespace": "com.streaming.avro.messages.tweets",
     "fields":[
         {

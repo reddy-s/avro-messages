@@ -1,6 +1,6 @@
 {
     "type":"record",
-    "name":"value",
+    "name":"Value",
     "namespace": "com.streaming.avro.messages.tweets",
     "fields":[
         {
