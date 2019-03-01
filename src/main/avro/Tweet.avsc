@@ -1,21 +1,19 @@
 {
     "type":"record",
-    "name":"Tweet",
-    "namespace": "com.streaming.avro.messages",
+    "name":"value",
+    "namespace": "com.streaming.avro.messages.Tweet",
     "fields":[
         {
             "name":"id",
-            "type":["long", "null"]
+            "type":"long"
         },
         {
             "name":"tweet",
-            "type":["null","string"],
-            "default":null
+            "type":string"
         },
         {
             "name":"retweet",
-            "type":["null","boolean"],
-            "default":null
+            "type":"long"
         }
     ]
 }
